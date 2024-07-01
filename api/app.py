@@ -33,8 +33,8 @@ def hello():
         "location": city,
         "greeting": greeting
     }
-    
-    return json.dumps(response)
+
+    return json.dumps(response, indent=2)
 
 
 if __name__ == '__main__':
