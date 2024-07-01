@@ -1,7 +1,6 @@
 import json
-import pprint
 import requests
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, Response
 
 app = Flask(__name__)
 
@@ -35,12 +34,9 @@ def hello():
         "greeting": greeting
     }
 
+    formatted_response = json.dumps(response, indent=4)
 
-    return {
-        "client_ip": client_ip,
-        "location": city,
-        "greeting": greeting
-    }
+    return Response(formatted_response, mimetype='application/json')
 
 
 if __name__ == '__main__':
