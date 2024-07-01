@@ -1,4 +1,5 @@
 import json
+import pprint
 import requests
 from flask import Flask, jsonify, request
 
@@ -36,7 +37,7 @@ def hello():
 
     json_str = json.dumps(response, indent=4)
 
-    return json_str
+    return pprint.pprint(json_str)
 
 
 if __name__ == '__main__':
