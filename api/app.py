@@ -31,7 +31,7 @@ def hello():
         ("greeting", greeting)
     ])
     
-    return jsonify(response)
+    return response
 
 if __name__ == '__main__':
     app.run()
