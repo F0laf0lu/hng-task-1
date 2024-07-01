@@ -35,9 +35,12 @@ def hello():
         "greeting": greeting
     }
 
-    json_str = json.dumps(response, indent=4)
 
-    return pprint.pprint(json_str)
+    return {
+        "client_ip": client_ip,
+        "location": city,
+        "greeting": greeting
+    }
 
 
 if __name__ == '__main__':
