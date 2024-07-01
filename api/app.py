@@ -34,7 +34,9 @@ def hello():
         "greeting": greeting
     }
 
-    return json.dumps(response, indent=2)
+    json_str = json.dumps(response, indent=4)
+
+    return json_str
 
 
 if __name__ == '__main__':
