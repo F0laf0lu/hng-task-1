@@ -24,7 +24,7 @@ def get_temperature(lat, lon):
 
 @app.route('/api/hello', methods=["get"])
 def hello():
-    visitor_name = request.args.get('visitor_name')
+    visitor_name = request.args.get('visitor_name').capitalize()
     client_ip, city, lat, lon = get_ip()
     temperature = get_temperature(lat, lon)
     greeting = f"Hello, {visitor_name}!, the temperature is {temperature} degrees Celcius in {city}"
